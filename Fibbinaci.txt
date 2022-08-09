@@ -1,0 +1,17 @@
+var a
+mov a 0
+var b
+mov b 1
+var temp
+var n
+mov n 0
+wp back
+if n < 10
+	add n 1
+	mov temp b
+	add temp a
+	mov a b
+	mov b temp
+	print temp
+	goto back
+end

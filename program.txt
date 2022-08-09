@@ -1,0 +1,4 @@
+var a
+mov a -12
+abs a
+print a

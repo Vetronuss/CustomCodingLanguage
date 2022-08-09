@@ -1,0 +1,80 @@
+print One door has a prize behind it while the other 2 do not.
+var door1
+var door2
+var door3
+mov door1 0
+mov door2 0
+mov door3 0
+var r
+mov r rand:3
+if r == 0
+	mov door1 1
+end
+if r == 1
+	mov door2 1
+end
+if r == 2
+	mov door3 1
+end
+var selection
+print Pick a door 1-3
+ask selection
+if selection == 1
+	if door3 == 1
+		print door 2 does not have a prize
+	end
+	if door2 == 1
+		print door 3 does not have a prize
+	end
+	if door1 == 1
+		print door 2 does not have a prize
+	end
+end
+if selection == 2
+	if door1 == 1
+		print door 3 does not have a prize
+	end
+	if door3 == 1
+		print door 1 does not have a prize
+	end
+	if door2 == 1
+		print door 1 does not have a prize
+	end
+end
+if selection == 3
+	if door1 == 1
+		print door 2 does not have a prize
+	end
+	if door2 == 1
+		print door 1 does not have a prize
+	end
+	if door3 == 1
+		print door 1 does not have a prize
+	end
+end
+var win
+mov win 0
+print Pick a door 1-3
+ask selection
+if selection == 1
+	if door1 = 1
+		mov win 1
+	end
+end
+if selection == 2
+	if door2 == 1
+		mov win 1
+	end
+end
+if selection == 3
+	if door3 = 1
+		mov win 1
+	end
+end
+if win == 1
+	print You win!
+end
+if win == 0
+	print You lose.
+end
+
